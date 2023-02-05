@@ -1,0 +1,23 @@
+{
+  "builders": [
+      {
+        "ami_name"       : "Custome_image",
+        "region"         : "ap-south-1",
+        "instance_type"  : "t2.micro",
+        "source_ami"     : "ami-06984ea821ac0a879",
+        "tags" : {
+            "Name" : "packer-ami"
+        },
+        "ssh_username"   : "ubuntu",
+        "type"           : "amazon-ebs"
+      }
+  ],
+  "provisioners": [
+    {
+      "type"             : "shell",
+      "scripts"          : ["./build-customAMI.sh"],
+      "pause_before"     : "4s"
+    }
+  ]
+}
+  
