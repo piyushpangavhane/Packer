@@ -1,7 +1,7 @@
 {
   "builders": [
       {
-        "ami_name"       : "Custome_image",
+        "ami_name"       : "Custome_image-{{timestamp}}",
         "region"         : "ap-south-1",
         "instance_type"  : "t2.micro",
         "source_ami"     : "ami-06984ea821ac0a879",
